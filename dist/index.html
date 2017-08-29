@@ -1,0 +1,24 @@
+<!DOCTYPE html><html><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"><title>nutsbp-mobile</title><script>(function (doc, win) {
+        var docEl = doc.documentElement,
+        resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+        dpr = window.devicePixelRatio;
+        recalc = function () {
+          var clientWidth = docEl.clientWidth;
+          if (!clientWidth) return;
+          if (clientWidth >= 560 && dpr <= 1.5) {
+            docEl.style.fontSize = '60px';
+          } else if (clientWidth >= 560) {
+            docEl.style.fontSize = '70px';
+          } else if (clientWidth >= 780) {
+            docEl.style.fontSize = '80px';
+          } else if (clientWidth >= 1000) {
+            docEl.style.fontSize = '100px';
+          } else {
+            docEl.style.fontSize = 100 * (clientWidth / 750) + 'px';
+          }
+        };
+        // Abort if browser does not support addEventListener
+        if (!doc.addEventListener) return;
+        win.addEventListener(resizeEvt, recalc, false);
+        doc.addEventListener('DOMContentLoaded', recalc, false);
+      })(document, window);</script><link href=/static/css/app.422b569fc735e7d0c14e81269110e275.css rel=stylesheet></head><body><div id=app></div><script type=text/javascript src=/static/js/manifest.3b3e10bf637e16571142.js></script><script type=text/javascript src=/static/js/vendor.d2f54455b5d7ec7622e9.js></script><script type=text/javascript src=/static/js/app.a7970b04a2ede3b337bf.js></script></body></html>
